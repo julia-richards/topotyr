@@ -2,9 +2,97 @@ main {
   width: 100%;
   height: 100%;
 }
+
 .title-wrapper {
   max-width: 660px;
   width: 100%;
   margin: 4rem auto;
   text-align: center;
+}
+/* custom svg */
+
+/* largely burger menu defaults from https://github.com/negomi/react-burger-menu */
+
+.burger-icon {
+  height: 16px;
+  width: 16px;
+}
+
+@media screen and (max-width: 460px) {
+  .burger-icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  fill: grey;
+  flex-shrink: 0;
+  justify-content: center;
+  transition: background 0.25s ease-out, margin-left 0.25s ease-out;
+  width: 43px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 460px) {
+  .bm-burger-button {
+    height: 54px;
+    width: 54px;
+    margin: 0;
+  }
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 18px;
+  width: 18px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-cross:hover {
+  background: #fff;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #3919b8;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+}
+
+.bm-item {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  user-select: none;
+}
+
+.bm-item:hover {
+  color: #4cc8a3;
+}
+
+.bm-item span {
+  margin-left: 0.5rem;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: red;
 }
