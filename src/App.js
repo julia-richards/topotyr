@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import { scaleDown as Menu } from "react-burger-menu";
+import Home from "./pages/Home";
 
-function Home() {
+function About() {
+  return <h2>About</h2>;
+}
+
+function Maps() {
   return (
     <React.Fragment>
-      <div className="title-wrapper">
-        <h1>topotyr</h1>
-        <h4>Maps for avid humans and average adventurers.</h4>
-      </div>
+      <h2>Maps</h2>
       <iframe
         width="100%"
         height="520"
@@ -18,14 +20,6 @@ function Home() {
       />
     </React.Fragment>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Maps() {
-  return <h2>Maps</h2>;
 }
 const BurgerIcon = _ => (
   <svg className="burger-icon" viewBox="0 0 32 32">
