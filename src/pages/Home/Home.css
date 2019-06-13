@@ -1,0 +1,17 @@
+.RouteOutline {
+  max-width: 45%;
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  fill: #fac7ae;
+  animation: hueRotation 7s linear 200ms infinite !important;
+}
+
+@keyframes hueRotation {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
