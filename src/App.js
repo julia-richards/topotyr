@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import { scaleDown as Menu } from "react-burger-menu";
@@ -13,7 +13,7 @@ function Home() {
       <iframe
         width="100%"
         height="520"
-        frameborder="0"
+        frameBorder="0"
         src="https://juliarichards.carto.com/builder/eae64ec7-73c2-4eb6-af44-90cf5d7c50a3/embed"
       />
     </React.Fragment>
@@ -36,16 +36,26 @@ const BurgerIcon = _ => (
 );
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div id="App">
       <Menu
         customBurgerIcon={<BurgerIcon />}
         outerContainerId="App"
         pageWrapId="page-wrap"
+        isOpen={menuOpen}
+        onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
       >
-        <Link to="/">Home</Link>
-        <Link to="/about/">About</Link>
-        <Link to="/maps/">Maps</Link>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          Home
+        </Link>
+        <Link to="/about/" onClick={() => setMenuOpen(false)}>
+          About
+        </Link>
+        <Link to="/maps/" onClick={() => setMenuOpen(false)}>
+          Maps
+        </Link>
       </Menu>
       <main id="page-wrap">
         <Route path="/" exact component={Home} />
