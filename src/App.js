@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import "./App.css";
 import { scaleDown as Menu } from "react-burger-menu";
 
@@ -37,24 +37,22 @@ const BurgerIcon = _ => (
 
 function App() {
   return (
-    <Router>
-      <div id="outer-container">
-        <Menu
-          customBurgerIcon={<BurgerIcon />}
-          pageWrapId={"page-wrap"}
-          outerContainerId={"outer-container"}
-        >
-          <Link to="/">Home</Link>
-          <Link to="/about/">About</Link>
-          <Link to="/maps/">Maps</Link>
-        </Menu>
-        <main id="page-wrap">
-          <Route path="/" exact component={Home} />
-          <Route path="/about/" component={About} />
-          <Route path="/maps/" component={Maps} />
-        </main>
-      </div>
-    </Router>
+    <div id="App">
+      <Menu
+        customBurgerIcon={<BurgerIcon />}
+        outerContainerId="App"
+        pageWrapId="page-wrap"
+      >
+        <Link to="/">Home</Link>
+        <Link to="/about/">About</Link>
+        <Link to="/maps/">Maps</Link>
+      </Menu>
+      <main id="page-wrap">
+        <Route path="/" exact component={Home} />
+        <Route path="/about/" component={About} />
+        <Route path="/maps/" component={Maps} />
+      </main>
+    </div>
   );
 }
 
