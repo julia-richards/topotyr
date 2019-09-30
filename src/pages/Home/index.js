@@ -7,7 +7,6 @@ function Home() {
     <React.Fragment>
       <div className="title-wrapper">
         <h1>topotyr</h1>
-        <h4>Maps for avid humans and average adventurers.</h4>
       </div>
       <RouteOutline className="RouteOutline" />
     </React.Fragment>
