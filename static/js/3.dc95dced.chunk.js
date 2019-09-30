@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{51:function(e,a,t){},52:function(e,a,t){"use strict";t.r(a);var n=t(0),r=t.n(n);t(51);a.default=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement("div",{className:"title-wrapper"},r.a.createElement("h2",null,"About")),r.a.createElement("div",{className:"About-card"},r.a.createElement("div",{className:"text-wrap"},r.a.createElement("p",null,r.a.createElement("strong",null,"Mission")," topotyr makes maps for avid humans and average adventurers."))))}}}]);
-//# sourceMappingURL=3.dc95dced.chunk.js.map
