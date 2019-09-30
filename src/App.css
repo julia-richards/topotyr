@@ -28,3 +28,8 @@ main {
   text-align: center;
   color: #fff;
 }
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,18 @@
+.map-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.map-card {
+  width: 200px;
+  margin: 10px;
+}
+.map-card-image {
+  max-width: 100%;
+}
+.map-card-title {
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
