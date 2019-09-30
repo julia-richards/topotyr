@@ -6,7 +6,9 @@
   fill: #fac7ae;
   animation: hueRotation 7s linear 200ms infinite !important;
 }
-
+.title-wrapper {
+  color: #fac7ae;
+}
 @keyframes hueRotation {
   0% {
     -webkit-filter: hue-rotate(0deg);

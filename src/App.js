@@ -6,6 +6,7 @@ import BurgerMenu from "./BurgerMenu";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Maps = lazy(() => import("./pages/Maps"));
+const SilvertonTrails = lazy(() => import("./pages/SilvertonTrails"));
 
 function App() {
   return (
@@ -30,7 +31,12 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about/" component={About} />
-            <Route path="/maps/" component={Maps} />
+            <Route exact path="/maps/" component={Maps} />
+            <Route
+              exact
+              path="/maps/silverton_trails/:slug"
+              component={SilvertonTrails}
+            />
           </Switch>
         </Suspense>
       </main>

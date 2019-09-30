@@ -13,6 +13,7 @@ const BurgerIcon = _ => (
 
 const BurgerMenu = _ => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <div className="Menu-wrap">
@@ -25,13 +26,13 @@ const BurgerMenu = _ => {
         onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
         className="Menu"
       >
-        <Link to="/" onClick={() => setMenuOpen(false)}>
+        <Link to="/" onClick={closeMenu}>
           Home
         </Link>
-        <Link to="/about/" onClick={() => setMenuOpen(false)}>
+        <Link to="/about/" onClick={closeMenu}>
           About
         </Link>
-        <Link to="/maps/" onClick={() => setMenuOpen(false)}>
+        <Link to="/maps/" onClick={closeMenu}>
           Maps
         </Link>
       </Menu>
