@@ -34,7 +34,7 @@ function App() {
             <Route exact path="/maps/" component={Maps} />
             <Route
               exact
-              path="/maps/silverton_trails/:slug"
+              path="/maps/silverton_trails/:slug?"
               component={SilvertonTrails}
             />
           </Switch>

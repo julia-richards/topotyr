@@ -48,43 +48,50 @@ const SilvertonTrails = ({
             </NavLink>
           ))}
         </nav>
-        <h1>{activeMap.name}</h1>
-        <div>
-          <button
-            onClick={() =>
-              setBasemap("http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg")
-            }
-          >
-            Terrain
-          </button>
-          <button
-            onClick={() =>
-              setBasemap(
-                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'"
-              )
-            }
-          >
-            Satellite
-          </button>
-        </div>
-        <Map
-          center={activeMap.center}
-          zoom={13}
-          attributionControl={true}
-          zoomControl={true}
-          doubleClickZoom={true}
-          scrollWheelZoom={false}
-          dragging={true}
-          animate={true}
-          easeLinearity={0.35}
-        >
-          <TileLayer url={basemap} />
-          <GeoJSON
-            data={activeMap.geoJSON}
-            key={activeMap.slug}
-            style={feature => ({ color: "#A6483E" })}
-          />
-        </Map>
+        {!!activeMap ? (
+          <React.Fragment>
+            <h1>{activeMap.name}</h1>
+
+            <div>
+              <button
+                onClick={() =>
+                  setBasemap("http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg")
+                }
+              >
+                Terrain
+              </button>
+              <button
+                onClick={() =>
+                  setBasemap(
+                    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'"
+                  )
+                }
+              >
+                Satellite
+              </button>
+            </div>
+            <Map
+              center={activeMap.center}
+              zoom={13}
+              attributionControl={true}
+              zoomControl={true}
+              doubleClickZoom={true}
+              scrollWheelZoom={false}
+              dragging={true}
+              animate={true}
+              easeLinearity={0.35}
+            >
+              <TileLayer url={basemap} />
+              <GeoJSON
+                data={activeMap.geoJSON}
+                key={activeMap.slug}
+                style={feature => ({ color: "#A6483E" })}
+              />
+            </Map>
+          </React.Fragment>
+        ) : (
+          <h3 className="none-selected-msg">Select a trail!</h3>
+        )}
       </div>
     </React.Fragment>
   );
