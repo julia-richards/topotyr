@@ -50,3 +50,8 @@
   line-height: 1.8;
   z-index: 2;
 }
+
+a.contact-link {
+  text-decoration: underline;
+  color: #454d53;
+}
