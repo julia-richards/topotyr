@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Map, GeoJSON, TileLayer } from "react-leaflet";
 
-import anvilNiagra from "./AnviltoNiagra.json";
+import anvilNiagara from "./AnviltoNiagara.json";
 import iceLakes from "./IceLakes.json";
 
 import "leaflet/dist/leaflet.css";
@@ -11,8 +11,8 @@ import "./SilvertonTrails.css";
 const mapOptions = [
   {
     slug: "anvil",
-    name: "Anvil to Niagra",
-    geoJSON: anvilNiagra,
+    name: "Anvil to Niagara",
+    geoJSON: anvilNiagara,
     center: [37.815015, -107.667013]
   },
   {
