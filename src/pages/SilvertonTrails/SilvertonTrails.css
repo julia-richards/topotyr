@@ -29,3 +29,8 @@
   color: #fff;
   border-color: #fff;
 }
+
+.none-selected-msg {
+  text-align: center;
+  margin-top: 32px;
+}
