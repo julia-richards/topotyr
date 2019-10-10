@@ -6,7 +6,12 @@ import BurgerMenu from "./BurgerMenu";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Maps = lazy(() => import("./pages/Maps"));
-const SilvertonTrails = lazy(() => import("./pages/SilvertonTrails"));
+const DEMBlender = lazy(() => import("./pages/Maps/DEMBlender"));
+const EdibleCampus = lazy(() => import("./pages/Maps/EdibleCampus"));
+const PopulationProjections = lazy(() =>
+  import("./pages/Maps/PopulationProjections")
+);
+const SilvertonTrails = lazy(() => import("./pages/Maps/SilvertonTrails"));
 
 function App() {
   return (
@@ -32,6 +37,17 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/about/" component={About} />
             <Route exact path="/maps/" component={Maps} />
+            <Route exact path="/maps/dem_blender" component={DEMBlender} />
+            <Route
+              exact
+              path="/maps/edible_campus_du"
+              component={EdibleCampus}
+            />
+            <Route
+              exact
+              path="/maps/population_projections"
+              component={PopulationProjections}
+            />
             <Route
               exact
               path="/maps/silverton_trails/:slug?"

@@ -2,11 +2,11 @@ import React from "react";
 import denverMap from "./images/Denver_Maps.png";
 import idahoMtn from "./images/Idaho_Mtns.png";
 import iceLakes from "./images/IceLakes.png";
-import fruitMap from "./images/FruitMap.png";
+import edibleCampus from "./images/EdibleCampus.png";
 import littleHelp from "./images/CO_Springs_ALH.png";
 import demBlender from "./images/blenderDemo.png";
 
-import "./Maps.css";
+import "./styles/Maps.css";
 
 const mapCollection = [
   {
@@ -25,14 +25,14 @@ const mapCollection = [
   {
     image: littleHelp,
     title: "Population Projections",
-    link: "",
+    link: "/maps/population_projections",
     detail:
       "A custom project for the non-profit organization A Little Help to visualize population changes in the elderly."
   },
   {
-    image: fruitMap,
+    image: edibleCampus,
     title: "Edible Campus",
-    link: "",
+    link: "/maps/edible_campus_du",
     detail:
       "A static map design for increasing student interaction with edible fruit at the University of Denver."
   },
@@ -47,7 +47,7 @@ const mapCollection = [
   {
     image: demBlender,
     title: "DEM Blender Relief",
-    link: "",
+    link: "/maps/dem_blender",
     detail:
       "A sample of shaded relief DEM (digital elevation model) using blender and photoshop."
   }
