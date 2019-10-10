@@ -20,7 +20,7 @@
 }
 .map-card-image-container {
   position: relative;
-  max-height: 220px;
+  height: 220px;
   overflow-y: hidden;
   display: flex;
   justify-content: center;
